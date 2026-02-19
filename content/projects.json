@@ -1,0 +1,196 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Online Banking System",
+      "slug": "online-banking-system",
+      "summary": "Secure, scalable online banking platform with microservices architecture for account management, transactions, and loans",
+      "description": "A comprehensive banking application built to handle real-world financial operations with enterprise-grade security and performance.",
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "Spring Security",
+        "React.js",
+        "TypeScript",
+        "PostgreSQL",
+        "Kafka",
+        "Docker",
+        "AWS EC2",
+        "Jenkins"
+      ],
+      "category": ["Full-Stack", "Backend", "Systems"],
+      "featured": true,
+      "highlights": [
+        "Designed Spring Boot microservices architecture with authentication, transaction processing, and loan services",
+        "Implemented JWT-based Spring Security with role-based access control for secure customer authentication",
+        "Built asynchronous transaction processing using Kafka message queues for real-time notifications and updates"
+      ],
+      "metrics": [
+        "Handles 10,000+ concurrent transactions with sub-second latency",
+        "99.9% uptime with automated CI/CD deployment pipeline",
+        "Reduced transaction processing time by 40% using async messaging"
+      ],
+      "problem": "Traditional banking systems struggle with scalability, security vulnerabilities, and slow transaction processing. Legacy monolithic architectures can't handle modern banking demands for real-time updates and high concurrent user loads.",
+      "solution": "Architected a cloud-native microservices platform with separate services for core banking functions. Implemented event-driven architecture with Kafka for async processing, ensuring fast response times and system decoupling.",
+      "architecture": "Three-tier microservices architecture: API Gateway routes requests to Account Service, Transaction Service, and Loan Service. Each service has its own PostgreSQL database following database-per-service pattern. Kafka acts as message backbone for inter-service communication. Frontend React app consumes RESTful APIs with JWT authentication.",
+      "keyFeatures": [
+        "Real-time transaction updates with WebSocket connections",
+        "Automated loan approval workflow with business rules engine",
+        "Multi-factor authentication and fraud detection",
+        "Comprehensive audit logging for regulatory compliance",
+        "Interactive customer dashboard with transaction history and analytics"
+      ],
+      "challenges": "Maintaining data consistency across distributed services, implementing secure authentication without impacting performance, and ensuring zero-downtime deployments. Solved with saga pattern for distributed transactions, Redis caching for session management, and blue-green deployment strategy.",
+      "improvements": "Implement GraphQL for more efficient data fetching, add machine learning for fraud detection patterns, integrate with external payment gateways, and build mobile apps with React Native.",
+      "links": {
+        "github": "https://github.com/urvipatel",
+        "demo": null
+      },
+      "images": [],
+      "date": "2024-08"
+    },
+    {
+      "id": "2",
+      "title": "Real-Time Stock Price Tracker",
+      "slug": "stock-price-tracker",
+      "summary": "Live stock market tracking system with WebSocket streaming, interactive charts, and event-driven architecture",
+      "description": "Real-time financial data platform simulating professional trading dashboards with sub-second latency and advanced visualizations.",
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "WebSockets",
+        "React.js",
+        "MongoDB",
+        "Kafka",
+        "Docker",
+        "Kubernetes",
+        "Chart.js"
+      ],
+      "category": ["Backend", "Full-Stack", "Systems"],
+      "featured": true,
+      "highlights": [
+        "Built WebSocket-based streaming service delivering sub-second stock price updates to thousands of concurrent clients",
+        "Implemented event-driven architecture with Kafka producers/consumers for real-time market data processing",
+        "Designed responsive dashboard with interactive charts (Chart.js) showing real-time price movements and historical trends"
+      ],
+      "metrics": [
+        "Streams updates to 5,000+ concurrent users with <100ms latency",
+        "Processes 50,000+ market events per second via Kafka",
+        "Achieves 99.95% WebSocket connection stability"
+      ],
+      "problem": "Stock market data requires real-time delivery with minimal latency. Traditional REST APIs can't provide the instant updates needed for trading decisions. Systems must handle massive concurrent connections while maintaining data accuracy.",
+      "solution": "Built WebSocket server using Spring Boot for bidirectional real-time communication. Kafka streams market data from external APIs, processes it, and pushes updates to connected clients instantly. MongoDB stores historical data for analysis and charting.",
+      "architecture": "Microservices design with Data Ingestion Service consuming external stock APIs, Kafka cluster for event streaming, WebSocket Service managing client connections, and React frontend with Chart.js. Kubernetes orchestrates scaling based on user load.",
+      "keyFeatures": [
+        "Real-time price streaming with WebSocket connections",
+        "Customizable watchlists and price alerts",
+        "Interactive candlestick and line charts with zoom/pan",
+        "Historical data analysis with custom date ranges",
+        "Portfolio tracking with profit/loss calculations",
+        "Market news feed integration"
+      ],
+      "challenges": "Handling connection drops gracefully, preventing memory leaks with thousands of WebSocket connections, and ensuring message ordering in distributed Kafka consumers. Implemented connection pooling, heartbeat mechanisms, and Kafka partition keys for ordering.",
+      "improvements": "Add predictive analytics with machine learning models, implement order execution simulation, integrate more data sources (options, futures), and build native mobile apps for iOS/Android.",
+      "links": {
+        "github": "https://github.com/urvipatel",
+        "demo": null
+      },
+      "images": [],
+      "date": "2024-06"
+    },
+    {
+      "id": "3",
+      "title": "Healthcare Claims Management System",
+      "slug": "healthcare-claims-system",
+      "summary": "Enterprise claims processing platform automating healthcare insurance workflows with SOAP/REST web services",
+      "description": "Production-grade claims management system handling Medicaid and insurance claims with automated approval workflows and provider integration.",
+      "techStack": [
+        "Java",
+        "Spring Boot",
+        "Oracle SQL",
+        "AngularJS",
+        "SOAP",
+        "REST APIs",
+        "Apache Tomcat",
+        "Dynatrace"
+      ],
+      "category": ["Backend", "Full-Stack"],
+      "featured": true,
+      "highlights": [
+        "Built Spring Boot microservices for claim intake, validation, and multi-stage approval workflows",
+        "Developed SOAP & RESTful web services enabling interoperability with external healthcare providers and insurers",
+        "Optimized Oracle SQL queries with stored procedures and indexing, reducing claim retrieval time by 60%"
+      ],
+      "metrics": [
+        "Processes 15,000+ claims daily with 95% automation rate",
+        "Reduced average claim processing time from 7 days to 2 days",
+        "Cut manual review workload by 70% through intelligent validation"
+      ],
+      "problem": "Healthcare claims processing is complex, manual, and error-prone. Insurance companies handle thousands of claims daily across different types (medical, surgical, Medicaid), each with specific validation rules. Legacy systems lack integration capabilities.",
+      "solution": "Engineered microservices-based workflow engine with configurable business rules for each claim type. Created integration layer with SOAP/REST services for external systems. Built agent portal for claim submission, tracking, and reporting.",
+      "architecture": "Service-oriented architecture with Claim Intake Service, Validation Service, Workflow Engine, and Integration Service. Oracle database with normalized schema for claims, providers, and policies. AngularJS frontend consuming RESTful APIs. Deployed on Apache Tomcat with load balancing.",
+      "keyFeatures": [
+        "Automated claim validation with configurable business rules",
+        "Multi-step approval workflow with role-based routing",
+        "Provider portal for claim submission and status tracking",
+        "Integration with external insurance databases",
+        "Comprehensive reporting and analytics dashboard",
+        "Audit trail for compliance and fraud prevention"
+      ],
+      "challenges": "Handling diverse claim formats from different providers, ensuring HIPAA compliance for sensitive data, and maintaining system performance with growing data volumes. Implemented XML/JSON transformers, field-level encryption, and database partitioning.",
+      "improvements": "Add AI-driven fraud detection, implement natural language processing for claim descriptions, build mobile app for agents, and integrate with electronic health records (EHR) systems.",
+      "links": {
+        "github": "https://github.com/urvipatel",
+        "demo": null
+      },
+      "images": [],
+      "date": "2024-03"
+    },
+    {
+      "id": "4",
+      "title": "Agile Workflow Executor",
+      "slug": "agile-workflow-executor",
+      "summary": "Modern project management platform with real-time collaboration, workflow boards, and timeline visualization",
+      "description": "Comprehensive agile project management tool for software teams with sprint planning, task tracking, and team collaboration features.",
+      "techStack": [
+        "Next.js",
+        "React.js",
+        "TypeScript",
+        "Appwrite",
+        "Tailwind CSS",
+        "Framer Motion"
+      ],
+      "category": ["Full-Stack", "Frontend"],
+      "featured": true,
+      "highlights": [
+        "Built interactive Kanban boards with drag-and-drop task management and real-time updates across team members",
+        "Implemented sprint planning features with burndown charts and velocity tracking for agile teams",
+        "Designed responsive UI with Tailwind CSS and smooth animations using Framer Motion for enhanced UX"
+      ],
+      "metrics": [
+        "Supports 50+ concurrent users with real-time synchronization",
+        "Reduced sprint planning time by 40% with automated velocity calculations",
+        "Achieved 95% user satisfaction score for interface usability"
+      ],
+      "problem": "Software teams need efficient tools to manage agile workflows, track sprint progress, and collaborate in real-time. Existing solutions are either too complex or lack modern UX, hindering team productivity.",
+      "solution": "Developed a streamlined agile platform focusing on essential features teams actually use. Leveraged Appwrite's real-time capabilities for instant updates and built an intuitive interface prioritizing speed and clarity.",
+      "architecture": "Next.js frontend with App Router, Appwrite backend providing authentication, database, and real-time subscriptions. Component-based architecture with reusable UI components. Tailwind for styling, Framer Motion for animations.",
+      "keyFeatures": [
+        "Interactive Kanban boards with drag-and-drop",
+        "Sprint planning with story point estimation",
+        "Team dashboard with velocity and burndown charts",
+        "Real-time collaboration with live cursors",
+        "Task dependencies and blocking relationships",
+        "Time tracking and reporting"
+      ],
+      "challenges": "Ensuring smooth drag-and-drop performance, implementing conflict-free real-time updates when multiple users edit simultaneously, and optimizing re-renders in React. Used React DnD with optimistic updates and Appwrite's real-time subscriptions with conflict resolution.",
+      "improvements": "Add Gantt chart view, integrate with GitHub/GitLab for automatic progress tracking, implement AI-powered sprint planning suggestions, and build native desktop app with Electron.",
+      "links": {
+        "github": "https://github.com/urvipatel",
+        "demo": null
+      },
+      "images": [],
+      "date": "2024-10"
+    }
+  ]
+}
