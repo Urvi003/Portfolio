@@ -40,6 +40,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-public/resume.pdf
-public/Urvi.jpg
 DEPLOYMENT_GUIDE.md
