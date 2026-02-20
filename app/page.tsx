@@ -4,6 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import TechStack from "@/components/TechStack";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import ExperienceLines from "@/components/ExperienceLines";
+import Certificates from "@/components/Certificates";
 import ContactSection from "@/components/ContactSection";
 import EngineeringPhilosophy from "@/components/EngineeringPhilosophy";
 
@@ -26,6 +27,8 @@ export default function Home() {
       <FeaturedProjects />
 
       <ExperienceLines />
+
+      <Certificates />
 
       <ContactSection />
     </main>
